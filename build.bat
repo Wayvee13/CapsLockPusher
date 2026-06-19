@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-echo Building CapsLockPusher.exe...
+echo Building CapsLockPusher UI...
 echo.
 
 where dotnet >nul 2>nul

@@ -8,7 +8,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>CapsLockPusher</AssemblyName>
     <RootNamespace>CapsLockPusher</RootNamespace>
+    <ApplicationIcon>app.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="app.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
 </Project>
