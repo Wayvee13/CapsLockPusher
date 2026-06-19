@@ -21,8 +21,8 @@ public sealed class MainForm : Form
     private const byte VK_CAPITAL = 0x14;
     private const uint KEYEVENTF_KEYUP = 0x0002;
 
-    private readonly Timer _pressTimer;
-    private readonly Timer _uiTimer;
+    private readonly System.Windows.Forms.Timer _pressTimer;
+    private readonly System.Windows.Forms.Timer _uiTimer;
     private readonly NotifyIcon _trayIcon;
 
     private readonly Label _statusBadge;
@@ -54,10 +54,10 @@ public sealed class MainForm : Form
         Font = new Font("Segoe UI", 10);
         Icon = LoadAppIcon();
 
-        _pressTimer = new Timer();
+        _pressTimer = new System.Windows.Forms.Timer();
         _pressTimer.Tick += (_, _) => PressCapsLockAndUpdate();
 
-        _uiTimer = new Timer { Interval = 500 };
+        _uiTimer = new System.Windows.Forms.Timer { Interval = 500 };
         _uiTimer.Tick += (_, _) => RefreshStatusUi();
         _uiTimer.Start();
 
