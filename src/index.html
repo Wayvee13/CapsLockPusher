@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CapsLock Pusher</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <section class="hero">
+      <div class="glow"></div>
+
+      <div class="top">
+        <div class="logo">CL</div>
+        <div>
+          <h1>CapsLock Pusher</h1>
+          <p>Auto key pusher for report scripts</p>
+        </div>
+        <div id="badge" class="badge active">ACTIVE</div>
+      </div>
+
+      <div class="status-row">
+        <div>
+          <span class="label">Статус</span>
+          <strong id="statusText">Активен</strong>
+        </div>
+        <button id="toggleBtn" class="danger">Stop</button>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <span class="label">Последнее нажатие</span>
+        <strong id="lastPress">—</strong>
+      </div>
+      <div class="card">
+        <span class="label">Следующее</span>
+        <strong id="nextPress">60s</strong>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Control Panel</h2>
+        <button id="pressNowBtn" class="secondary">Press now</button>
+      </div>
+
+      <label class="field">
+        <span>Интервал, секунд</span>
+        <input id="intervalInput" type="number" min="5" max="3600" step="5" value="60" />
+      </label>
+
+      <div class="progress-wrap">
+        <div id="progressBar" class="progress"></div>
+      </div>
+
+      <p class="hint">
+        Приложение работает в фоне. Закрытие окна не выключает таймер — используй кнопку Exit в трее.
+      </p>
+    </section>
+
+    <footer>
+      <span id="footerText">CapsLock будет нажат каждые 60 секунд</span>
+    </footer>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
